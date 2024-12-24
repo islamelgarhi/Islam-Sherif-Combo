@@ -1,0 +1,23 @@
+@import './styles/typography.css';
+@import './styles/spacing.css';
+@import './styles/animations.css';
+@import './styles/social.css';
+@import './styles/cards.css';
+@import './styles/process.css';
+@import './styles/search.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #17D9FF;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-white dark:bg-black text-[var(--text-primary)] transition-colors font-normal;
+  letter-spacing: -0.01em;
+}

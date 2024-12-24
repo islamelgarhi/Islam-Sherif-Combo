@@ -1,0 +1,64 @@
+/* Existing animations... */
+
+/* Loader Animation */
+.loader {
+  color: rgb(124, 124, 124);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 25px;
+  height: 40px;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+  padding-left: 6px;
+}
+
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color, #000) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color, #000) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  animation: spin_words 4s infinite;
+}
+
+@keyframes spin_words {
+  10% {
+    transform: translateY(-102%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-202%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-302%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-402%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
